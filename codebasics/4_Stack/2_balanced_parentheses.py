@@ -1,5 +1,4 @@
 from collections import deque
-from doctest import FAIL_FAST
 
 class Stack:
   def __init__(self):
@@ -34,9 +33,7 @@ def is_balanced(s):
         if  chk == "()" or chk == "{}" or chk == "[]":
           st.pop()
 
-  if st.is_empty():
-    return True
-  return False
+  return st.is_empty()
 
 if __name__ == "__main__":
   print(is_balanced("({a+b})"))
